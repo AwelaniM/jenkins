@@ -3,8 +3,7 @@
 FROM docker.io/library/websphere-liberty
 USER root
 RUN apt-get update -y
-RUN apt-get install -y git
-COPY oc /usr/local/bin/oc && chmod +x /usr/local/bin/oc
+RUN apt-get install -y git oc
 COPY jenkins.war /config/dropins/
 #RUN configure.sh
 
