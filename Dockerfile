@@ -6,6 +6,6 @@ RUN apt-get update -y
 RUN apt-get install -y git
 COPY oc.txt /usr/local/bin/oc
 COPY jenkins.war /config/dropins/
-CMD chmod +x /usr/local/bin/oc
+RUN chmod +x /usr/local/bin/oc
 #RUN configure.sh
 
